@@ -4,9 +4,9 @@
           box-sizing: border-box;
 }
 
-.body {
-  padding: 90px 40px 0;
-}
+ body {
+     padding: 0 50px;
+   }
 
 /* header */
 .header {
