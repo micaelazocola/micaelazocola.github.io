@@ -534,6 +534,7 @@ h1 {
   text-align: center;
   background-color: #ffffff;
   padding-left: 600px;
+  padding-top: 60px;
 }
 
 .imagenes__galeria {
@@ -655,6 +656,7 @@ h1 {
   font-family: 'Bebas Neue', cursive;
   letter-spacing: 3px;
   margin-bottom: 20px;
+  padding-top: 60px;
 }
 
 .input-cont {
