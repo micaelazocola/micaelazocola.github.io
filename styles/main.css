@@ -1,8 +1,13 @@
-
 * {
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+@media screen and (max-width: 540px) {
+  html {
+    font-size: 12px;
+  }
 }
 
 /* header */
@@ -394,6 +399,13 @@ h1 {
   .tablaitems {
     padding: 2px;
   }
+  .tablaitem__img1 {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .ultimo__item {
+    padding-left: 100px;
+  }
 }
 
 /* termina grids index*/
@@ -510,6 +522,10 @@ h1 {
 
 /* termia footer*/
 /* galeria.html*/
+.body-galeria {
+  margin-top: 60px;
+}
+
 .container__galeria {
   background-color: #def5dc;
 }
@@ -517,7 +533,7 @@ h1 {
 #titulo-galeria {
   text-align: center;
   background-color: #ffffff;
-  padding-left: 500px;
+  padding-left: 600px;
 }
 
 .imagenes__galeria {
@@ -601,6 +617,12 @@ h1 {
   }
 }
 
+@media screen and (max-width: 540px) {
+  #titulo-galeria {
+    padding-left: 150px;
+  }
+}
+
 /* contacto*/
 .body-contacto {
   background-image: url(/imagenes/backgroundcontact.jpg);
@@ -672,12 +694,6 @@ textarea {
 }
 
 /* fin contacto*/
-@media screen and (max-width: 540px) {
-  html {
-    font-size: 12px;
-  }
-}
-
 /*sobre mi.html*/
 .container__sobremi {
   text-align: center;
@@ -703,7 +719,7 @@ textarea {
 }
 
 .titulo-sobremi {
-  padding-left: 500px;
+  padding-left: 600px;
 }
 
 .subtitulo__sobremi {
