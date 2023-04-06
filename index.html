@@ -4,158 +4,615 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pipa Sykes - Fashion Blog</title>
-    <meta name="description" content="Blog de Moda y Tendencia">
-    <meta name="keywords" content="ROPA, DISEÑO, FASHION, ESTILO, TIENDA, MODA, ACCESORIOS">
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Libre+Bodoni&family=Parisienne&family=Playfair+Display:ital@1&family=Prata&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="/main.css">
+    
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>TREELAN - Gestion</title>
 </head>
-<body class="body-index">
-   
-    <header class="header">
-        <nav class="menu__navegador">
-            <label class="logo"> Pipa Sykes</label>
-            <button class="toggle">
-                <lord-icon src="https://cdn.lordicon.com/auvicynv.json" trigger="loop"
-                style="width:25px;height:25px">
-                </lord-icon>
-            </button>
-            <ul class="menu__items menu__navegador__visible" >
-                <li><a href="/index.html" class="ul__item">HOME</a></li> 
-                <li><a href="/sobre-mi.html" class="ul__item">SOBRE MI</a></li> 
-                <li><a href="/newsleter.html" class="ul__item">NEWSLETTER</a></li> 
-                <li><a href="/galeria.html" class="ul__item">GALERIA</a></li> 
-                <li><a href="contacto.html" class="ul__item">CONTACTO</a></li>
-            </ul>
-        </nav>
+<body>
+    <!-- <header>
+        <div class="header-container">
+            <img class="img-logo" src="/Assets/imagenes/treelanlogo.png" alt="" width="150px" height="45px">
+            <button>Nombre de Usuario</button>
+        </div>
+
+    </header> -->
+    <nav>
+        <div class="sidebar-top">
+          <span class="shrink-btn">
+            <i class='bx bx-chevron-left'></i>
+          </span>
+          <img src="./Assets/imagenes/treelanlogo2.png" class="logo" alt="">
+          <h3 class="hide">TreeLan</h3>
           
-    </header>
-    
-    <div class="hero">
-        <div class="container_hero"> 
-
-            <h1>Estilo + Tendencia</h1>
-            <p class="p_hero"> To me, clothing is a form of self expression, there are hints about who you are in every piece of cloth you wear</p>
-
-            <section class="btn__container">
-
-                <a href="#holasoypepita" class="btn-ghost"> Scroll Down </a>
-    
-            </section>
-            
         </div>
-        
-    </div>
     
+        <div class="search">
+          <i class='bx bx-search'></i>
+          <input type="text" class="hide" placeholder="Busqueda ...">
+        </div>
     
-    
-    <div class="container-imgindex" id="holasoypepita">
-        <div class="row-mimarca" >
-       
-            <div class="column-mimarca">
-
-                <img src="/imagenes/accesories.jpg" width="100%" class="img-index">
-                <h3 class="titleimg"> Accesories</h3>
-                <section class="btn-shopnow">
-
-                    <a href="#holasoypepita" class="btn-ghost-img"> SHOP NOW </a>
-    
-                </section>
-
+        <div class="sidebar-links">
+          <ul>
+            <div class="active-tab"></div>
+            <li class="tooltip-element" data-tooltip="0">
+              <a href="#" class="active" data-active="0">
+                <div class="icon">
+                  <i class='bx bx-tachometer'></i>
+                  <i class='bx bxs-tachometer'></i>
+                </div>
+                <span class="link hide">Inicio</span>
+              </a>
+            </li>
+            <li class="tooltip-element" data-tooltip="1">
+              <a href="#" data-active="1">
+                <div class="icon">
+                  <i class='bx bx-folder'></i>
+                  <i class='bx bxs-folder'></i>
+                </div>
+                <span class="link hide">Proveedores</span>
+              </a>
+            </li>
+            <li class="tooltip-element" data-tooltip="2">
+              <a href="#" data-active="2">
+                <div class="icon">
+                  <i class='bx bx-message-square-detail'></i>
+                  <i class='bx bxs-message-square-detail'></i>
+                </div>
+                <span class="link hide">Calendarios</span>
+              </a>
+            </li>
+            <!-- <li class="tooltip-element" data-tooltip="3">
+              <a href="#" data-active="3">
+                <div class="icon">
+                  <i class='bx bx-bar-chart-square'></i>
+                  <i class='bx bxs-bar-chart-square'></i>
+                </div>
+                <span class="link hide">Analytics</span>
+              </a>
+            </li> -->
+            <div class="tooltip">
+              <span class="show">Inicio</span>
+              <span>Proveedores</span>
+              <span>Calendarios</span>
+              <span>Analytics</span>
             </div>
-
-            <div class="column-mimarca">
-                <img src="/imagenes/clothing.jpg" width= 100%"  class="img-index">
-                <h3 class="titleimg">clothing</h3>
-                <section class="btn-shopnow">
-
-                    <a href="#holasoypepita" class="btn-ghost-img"> SHOP NOW </a>
-        
-                </section>
+          </ul>
+    
+          <h4 class="hide">Servicios</h4>
+    
+          <ul>
+            <li class="tooltip-element" data-tooltip="0">
+              <a href="#" data-active="4">
+                <div class="icon">
+                  <i class='bx bx-notepad'></i>
+                  <i class='bx bxs-notepad'></i>
+                </div>
+                <span class="link hide">Treelan Online</span>
+              </a>
+            </li>
+            <li class="tooltip-element" data-tooltip="0">
+              <a href="#" data-active="4">
+                <div class="icon">
+                  <i class='bx bx-notepad'></i>
+                  <i class='bx bxs-notepad'></i>
+                </div>
+                <span class="link hide">Treelan Online</span>
+              </a>
+            </li>
+            <li class="tooltip-element" data-tooltip="1">
+              <a href="#" data-active="5">
+                <div class="icon">
+                  <i class='bx bx-help-circle'></i>
+                  <i class='bx bxs-help-circle'></i>
+                </div>
+                <span class="link hide">Turnos Online</span>
+              </a>
+            </li>
+            <li class="tooltip-element" data-tooltip="2">
+              <a href="#" data-active="6">
+                <div class="icon">
+                  <i class='bx bx-cog'></i>
+                  <i class='bx bxs-cog'></i>
+                </div>
+                <span class="link hide">Servicios Integrales</span>
+              </a>
+            </li>
+            <div class="tooltip">
+              <span class="show">Treelan Online</span>
+              <span>Turnos Online</span>
+              <span>Servicios Integrales</span>
             </div>
-
-            <div class="column-mimarca">
-                <img src="/imagenes/shoes.jpg" width="100%"  class="img-index">
-                <h3 class="titleimg">Shoes</h3>
-                <section class="btn-shopnow">
-
-                    <a href="#holasoypepita" class="btn-ghost-img"> SHOP NOW </a>
-        
-                </section>
-            </div>
-
-        </div>
-    </div>  
-
-    <div class="tablaindex">
-        <div class="tablaitems wide" id="tablaitems__item1">
-            
-            <h4 class="titulo__item">Quienes somos?</h4>
-            <p class="textotabla">Pipa Sykes es una pequeña empresa nacional productora de ropa que busca una producción completamente sustentable y eco friendly, que perdure en el tiempo y pueda ser reutilizada. 
-¡Esperamos con ansias seamos parte de tu vida! 
-</p>
-            
-        </div>
-
-        <div class="tablaitems wide">
-            <img src="/imagenes/tablaitem1.jpg" class="tablaitem__img1">
-        </div>
-
-        <div class="tablaitems wide">
-            <img src="/imagenes/tablaitem2.jpg" class="tablaitem__img1">
-        </div>
-
-        <div class="tablaitems wide">
-            <img src="/imagenes/tablaitem3.jpg" class="tablaitem__img3">
-        </div>
-
-        <div class="ultimo__item wide">
-            <p>-10% en compras online</p>
+          </ul>
         </div>
     
-    </div>
-
-    
-        
-    <div class="newsletter">
-        <h2 class="title__new">ANÓTATE A NUESTRO NEWSLETTER</h2>
-        <p class="par__news">No te pierdas todas nuestras actualizaciones, cotenido VIP y descuentos!</p>
-        <form>
-            <a href="/newsleter.html">
-                <a href="/newsleter.html" class="btn-news"> Conectar </a>
+        <div class="sidebar-footer">
+          <a href="#" class="account tooltip-element" data-tooltip="0">
+            <i class='bx bx-user'></i>
+          </a>
+          <div class="admin-user tooltip-element" data-tooltip="1">
+            <div class="admin-profile hide">
+              <img src="./img/face-1.png" alt="">
+              <div class="admin-info">
+                <h3>Santiago Vulliez</h3>
+                <h5>Admin</h5>
+              </div>
+            </div>
+            <a href="#" class="log-out">
+              <i class='bx bx-log-out'></i>
             </a>
-        </form>
-    </div>
+          </div>
+          <div class="tooltip">
+            <span class="show">Perfil</span>
+            <span>Salir</span>
+          </div>
+        </div>
+      </nav>
+    
+    
+      <main>
+        <!-- <button id="abrir-modal">Abrir Modal</button> -->
 
-    <footer>
-        <div class="footer">
-            <h2 class="footer__title">PEPITA S.</h2>
-        
-            <nav class="nav__footer">
-                <a class="ul__item__footer" href="/index.html">HOME</a> |
-                <a class="ul__item__footer" href="/sobre-mi.html">SOBRE MI</a> |
-                <a class="ul__item__footer" href="/newsleter.html">NEWSLETTER</a> |
-                <a class="ul__item__footer" href="/galeria.html">GALERIA</a> |
-                <a class="ul__item__footer" href="contacto.html">CONTACTO</a>
-            </nav>
-            
-      
-   
-            <div class="social__bar">
-                <a  href="https://www.facebook.com/KillJoey.Razorblade/" >  <img src="imagenes/facebookicon.png" width="45" height="45" class="icon__social"></a>
-                <a href="https://twitter.com/galaxcticMila" > <img src="imagenes/instagramicon.png"  width="45" height="45" class="icon__social"></a>
-                <a href="https://www.instagram.com/mmicaelaz"  target="_blank"> <img src="imagenes/twittweicon.png"  width="45" height="45" class="icon__social"></a>
-                <a href="https://www.youtube.com/c/maisyleigh" target="_blank"> <img src="imagenes/youtubeicon.png"  width="45" height="45" class="icon__social"></a>    
-                
+<div id="mi-modal" class="modal">
+  <div class="modal-contenido">
+    <span class="cerrar-modal">&times;</span>
+    <h1 class="titulo-editarclient">Editar cliente</h1>
+    
+  </div>
+</div>
+
+        <div class="contenedor-tabs">
+        <ul class="ul">
+            <li class="li activo">Clientes</li>
+            <li class="li">Online</li>
+            <li class="li">Cloud</li>
+            <li class="li">Full Server</li>
+            <li class="li">Whatsapp</li>
+        </ul>
+        <div class="subcontenedor">
+            <div class="bloque activo bloque1">
+                <div class="buscar-span"><p>Buscar:</p> <input type="text"></div>
+                <div class="contenedor-tabla">
+                    <table>
+                        <thead>
+                            <th>Nombre</th>
+                            <th>Contacto</th>
+                            <th>Teléfono</th>
+                            <th>E-mail</th>
+                            <th>Editar</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                  Abdo Luis
+                                  <button class="btn-editarClient" id="abrir-modal">
+                                    <img height="20px" width="20px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZJJREFUSEvFllFRQzEQRW8VAA6QAAoAB6AAcAAKCgrAAaAAUABVADgABdRBO2cm6eyE5IUkO9P9aTt9ycm9u3m7M20pZlviqgbelXQk6aDxgJ+SFpKWpXUlMMA7SReNwPTxR0nXuQPkwKh7lrQ/CI3LvyWdScKFTaRglH4Y6Kuke0nvjYc4lnQT0sRS4IdWeQrGmvMAuZTE75EAPg8bPNnUWTBqf8NDKD0dIZq1uEWBEntRtQUDIrfESYe9HDxXxdj+FvYl1y98t2BrS+2apWZQkGxOBefSswoLbkPuXcAopXh2JmrDHRzt5b4/BPBX5oXjCk7tBX4liZymuXYDRyiKidrVcwGnUMA5e20BDoNL0Jy9buBeKAfoVjwC7QbTpWgcsZBiTmv2DlttX3k90G7FFkz1tiiNqrtyjMVx9KGZF8eZQjezzce9SUx10GpbHOlOJfC/BgFPMHXA5MEn8RPStUlTqR9PWdf6H1DyXBz26CyMtJ7BnMW+fwoynbk4mcdYizqKqnmg91Sd3at1tnI70Brcnnkfe21d0wAAAABJRU5ErkJggg=="/>
+                                  </button> </td>
+                                <td>1</td>
+                                <td>12312313</td>
+                                <td>holahola@hotmail.com</td>
+                                <td>
+                                    <button class="btn-editar">
+                                        <i class="fa-thin fa-magnifying-glass"></i>
+                                        Editar
+                                    </button>
+                                </td>
+                                <td><span class="span-estado-activo">Activo</span></td>
+                                <td>
+                                    <button class="btn-website">
+                                        Website
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Abdo Luis<button class="btn-editarClient">
+                                  <img height="20px" width="20px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZJJREFUSEvFllFRQzEQRW8VAA6QAAoAB6AAcAAKCgrAAaAAUABVADgABdRBO2cm6eyE5IUkO9P9aTt9ycm9u3m7M20pZlviqgbelXQk6aDxgJ+SFpKWpXUlMMA7SReNwPTxR0nXuQPkwKh7lrQ/CI3LvyWdScKFTaRglH4Y6Kuke0nvjYc4lnQT0sRS4IdWeQrGmvMAuZTE75EAPg8bPNnUWTBqf8NDKD0dIZq1uEWBEntRtQUDIrfESYe9HDxXxdj+FvYl1y98t2BrS+2apWZQkGxOBefSswoLbkPuXcAopXh2JmrDHRzt5b4/BPBX5oXjCk7tBX4liZymuXYDRyiKidrVcwGnUMA5e20BDoNL0Jy9buBeKAfoVjwC7QbTpWgcsZBiTmv2DlttX3k90G7FFkz1tiiNqrtyjMVx9KGZF8eZQjezzce9SUx10GpbHOlOJfC/BgFPMHXA5MEn8RPStUlTqR9PWdf6H1DyXBz26CyMtJ7BnMW+fwoynbk4mcdYizqKqnmg91Sd3at1tnI70Brcnnkfe21d0wAAAABJRU5ErkJggg=="/>
+                                </button></td>
+                                <td>1</td>
+                                <td>12312313</td>
+                                <td>holahola@hotmail.com</td>
+                                <td>
+                                    <button class="btn-editar">
+                                        Editar
+                                    </button>
+                                </td>
+                                <td><span class="span-estado-inact">Inactivo</span></td>
+                                <td>
+                                    <button class="btn-website">
+                                        Website
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Abdo Luis <button class="btn-editarClient">
+                                  <img height="20px" width="20px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZJJREFUSEvFllFRQzEQRW8VAA6QAAoAB6AAcAAKCgrAAaAAUABVADgABdRBO2cm6eyE5IUkO9P9aTt9ycm9u3m7M20pZlviqgbelXQk6aDxgJ+SFpKWpXUlMMA7SReNwPTxR0nXuQPkwKh7lrQ/CI3LvyWdScKFTaRglH4Y6Kuke0nvjYc4lnQT0sRS4IdWeQrGmvMAuZTE75EAPg8bPNnUWTBqf8NDKD0dIZq1uEWBEntRtQUDIrfESYe9HDxXxdj+FvYl1y98t2BrS+2apWZQkGxOBefSswoLbkPuXcAopXh2JmrDHRzt5b4/BPBX5oXjCk7tBX4liZymuXYDRyiKidrVcwGnUMA5e20BDoNL0Jy9buBeKAfoVjwC7QbTpWgcsZBiTmv2DlttX3k90G7FFkz1tiiNqrtyjMVx9KGZF8eZQjezzce9SUx10GpbHOlOJfC/BgFPMHXA5MEn8RPStUlTqR9PWdf6H1DyXBz26CyMtJ7BnMW+fwoynbk4mcdYizqKqnmg91Sd3at1tnI70Brcnnkfe21d0wAAAABJRU5ErkJggg=="/>
+                                </button></td>
+                                <td>1</td>
+                                <td>12312313</td>
+                                <td>holahola@hotmail.com</td>
+                                <td>
+                                    <button class="btn-editar">
+                                        Editar
+                                    </button>
+                                </td>
+                                <td><span class="span-estado-activo">Activo</span></td>
+                                <td>
+                                    <button class="btn-website">
+                                        Website
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+            <div class="bloque bloque2">
+                <div class="buscar-span"><p>Buscar:</p> <input type="text"></div>
+                <div class="contenedor-tabla">
+                    <table>
+                        <thead>
+                            <th>Nombre</th>
+                            <th>Contacto</th>
+                            <th>Teléfono</th>
+                            <th>E-mail</th>
+                            <th>Editar</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Abdo Luis</td>
+                                <td>1</td>
+                                <td>12312313</td>
+                                <td>holahola@hotmail.com</td>
+                                <td>
+                                    <button class="btn-editar">
+                                        <i class="fa-thin fa-magnifying-glass"></i>
+                                        Editar
+                                    </button>
+                                </td>
+                                <td><span class="span-estado-activo">Activo</span></td>
+                                <td>
+                                    <button class="btn-website">
+                                        Website
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Abdo Luis</td>
+                                <td>1</td>
+                                <td>12312313</td>
+                                <td>holahola@hotmail.com</td>
+                                <td>
+                                    <button class="btn-editar">
+                                        Editar
+                                    </button>
+                                </td>
+                                <td><span class="span-estado-inact">Inactivo</span></td>
+                                <td>
+                                    <button class="btn-website">
+                                        Website
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Abdo Luis</td>
+                                <td>1</td>
+                                <td>12312313</td>
+                                <td>holahola@hotmail.com</td>
+                                <td>
+                                    <button class="btn-editar">
+                                        Editar
+                                    </button>
+                                </td>
+                                <td><span class="span-estado-activo">Activo</span></td>
+                                <td>
+                                    <button class="btn-website">
+                                        Website
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Abdo Luis</td>
+                                <td>1</td>
+                                <td>12312313</td>
+                                <td>holahola@hotmail.com</td>
+                                <td>
+                                    <button class="btn-editar">
+                                        <i class="fa-thin fa-magnifying-glass"></i>
+                                        Editar
+                                    </button>
+                                </td>
+                                <td><span class="span-estado-activo">Activo</span></td>
+                                <td>
+                                    <button class="btn-website">
+                                        Website
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Abdo Luis</td>
+                                <td>1</td>
+                                <td>12312313</td>
+                                <td>holahola@hotmail.com</td>
+                                <td>
+                                    <button class="btn-editar">
+                                        <i class="fa-thin fa-magnifying-glass"></i>
+                                        Editar
+                                    </button>
+                                </td>
+                                <td><span class="span-estado-activo">Activo</span></td>
+                                <td>
+                                    <button class="btn-website">
+                                        Website
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="bloque bloque3"><div class="buscar-span"><p>Buscar:</p> <input type="text"></div>
+            <div class="contenedor-tabla">
+                <table>
+                    <thead>
+                        <th>Nombre</th>
+                        <th>Contacto</th>
+                        <th>Teléfono</th>
+                        <th>E-mail</th>
+                        <th>Editar</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Abdo Luis</td>
+                            <td>1</td>
+                            <td>12312313</td>
+                            <td>holahola@hotmail.com</td>
+                            <td>
+                                <button class="btn-editar">
+                                    <i class="fa-thin fa-magnifying-glass"></i>
+                                    Editar
+                                </button>
+                            </td>
+                            <td><span class="span-estado-activo">Activo</span></td>
+                            <td>
+                                <button class="btn-website">
+                                    Website
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Abdo Luis</td>
+                            <td>1</td>
+                            <td>12312313</td>
+                            <td>holahola@hotmail.com</td>
+                            <td>
+                                <button class="btn-editar">
+                                    Editar
+                                </button>
+                            </td>
+                            <td><span class="span-estado-inact">Inactivo</span></td>
+                            <td>
+                                <button class="btn-website">
+                                    Website
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Abdo Luis</td>
+                            <td>1</td>
+                            <td>12312313</td>
+                            <td>holahola@hotmail.com</td>
+                            <td>
+                                <button class="btn-editar">
+                                    Editar
+                                </button>
+                            </td>
+                            <td><span class="span-estado-activo">Activo</span></td>
+                            <td>
+                                <button class="btn-website">
+                                    Website
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div></div>
+            <div class="bloque bloque4"><div class="buscar-span"><p>Buscar:</p> <input type="text"></div>
+            <div class="contenedor-tabla">
+                <table>
+                    <thead>
+                        <th>Nombre</th>
+                        <th>Contacto</th>
+                        <th>Teléfono</th>
+                        <th>E-mail</th>
+                        <th>Editar</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Abdo Luis</td>
+                            <td>1</td>
+                            <td>12312313</td>
+                            <td>holahola@hotmail.com</td>
+                            <td>
+                                <button class="btn-editar">
+                                    <i class="fa-thin fa-magnifying-glass"></i>
+                                    Editar
+                                </button>
+                            </td>
+                            <td><span class="span-estado-activo">Activo</span></td>
+                            <td>
+                                <button class="btn-website">
+                                    Website
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Abdo Luis</td>
+                            <td>1</td>
+                            <td>12312313</td>
+                            <td>holahola@hotmail.com</td>
+                            <td>
+                                <button class="btn-editar">
+                                    Editar
+                                </button>
+                            </td>
+                            <td><span class="span-estado-inact">Inactivo</span></td>
+                            <td>
+                                <button class="btn-website">
+                                    Website
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Abdo Luis</td>
+                            <td>1</td>
+                            <td>12312313</td>
+                            <td>holahola@hotmail.com</td>
+                            <td>
+                                <button class="btn-editar">
+                                    Editar
+                                </button>
+                            </td>
+                            <td><span class="span-estado-activo">Activo</span></td>
+                            <td>
+                                <button class="btn-website">
+                                    Website
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Abdo Luis</td>
+                            <td>1</td>
+                            <td>12312313</td>
+                            <td>holahola@hotmail.com</td>
+                            <td>
+                                <button class="btn-editar">
+                                    Editar
+                                </button>
+                            </td>
+                            <td><span class="span-estado-inact">Inactivo</span></td>
+                            <td>
+                                <button class="btn-website">
+                                    Website
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div></div>
+            <div class="bloque bloque5"><div class="buscar-span"><p>Buscar:</p> <input type="text"></div>
+            <div class="contenedor-tabla">
+                <table>
+                    <thead>
+                        <th>Nombre</th>
+                        <th>Contacto</th>
+                        <th>Teléfono</th>
+                        <th>E-mail</th>
+                        <th>Editar</th>
+                        <th>Estado</th>
+                        <th>Acciones</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Abdo Luis</td>
+                            <td>1</td>
+                            <td>12312313</td>
+                            <td>holahola@hotmail.com</td>
+                            <td>
+                                <button class="btn-editar">
+                                    Editar
+                                </button>
+                            </td>
+                            <td><span class="span-estado-inact">Inactivo</span></td>
+                            <td>
+                                <button class="btn-website">
+                                    Website
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Abdo Luis</td>
+                            <td>1</td>
+                            <td>12312313</td>
+                            <td>holahola@hotmail.com</td>
+                            <td>
+                                <button class="btn-editar">
+                                    <i class="fa-thin fa-magnifying-glass"></i>
+                                    Editar
+                                </button>
+                            </td>
+                            <td><span class="span-estado-activo">Activo</span></td>
+                            <td>
+                                <button class="btn-website">
+                                    Website
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Abdo Luis</td>
+                            <td>1</td>
+                            <td>12312313</td>
+                            <td>holahola@hotmail.com</td>
+                            <td>
+                                <button class="btn-editar">
+                                    Editar
+                                </button>
+                            </td>
+                            <td><span class="span-estado-inact">Inactivo</span></td>
+                            <td>
+                                <button class="btn-website">
+                                    Website
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Abdo Luis</td>
+                            <td>1</td>
+                            <td>12312313</td>
+                            <td>holahola@hotmail.com</td>
+                            <td>
+                                <button class="btn-editar">
+                                    Editar
+                                </button>
+                            </td>
+                            <td><span class="span-estado-activo">Activo</span></td>
+                            <td>
+                                <button class="btn-website">
+                                    Website
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Abdo Luis</td>
+                            <td>1</td>
+                            <td>12312313</td>
+                            <td>holahola@hotmail.com</td>
+                            <td>
+                                <button class="btn-editar">
+                                    <i class="fa-thin fa-magnifying-glass"></i>
+                                    Editar
+                                </button>
+                            </td>
+                            <td><span class="span-estado-activo">Activo</span></td>
+                            <td>
+                                <button class="btn-website">
+                                    Website
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div></div>
         </div>
-        <div>
-            <p class="par-derechos">© Micaela Zocola 2022 - All Registered.</p>
-        </div>
-    </footer>
-  
-    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
-    <script defer src="app.js"></script>
+      </div>
+      <script src="app.js"></script>
+
 </body>
 </html>
