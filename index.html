@@ -132,7 +132,7 @@
           </a>
           <div class="admin-user tooltip-element" data-tooltip="1">
             <div class="admin-profile hide">
-              <img src="./img/face-1.png" alt="">
+              <img src="lugar para poner una imagen" alt="">
               <div class="admin-info">
                 <h3>Santiago Vulliez</h3>
                 <h5>Admin</h5>
@@ -157,6 +157,60 @@
   <div class="modal-contenido">
     <span class="cerrar-modal">&times;</span>
     <h1 class="titulo-editarclient">Editar cliente</h1>
+    <div class="modal-contenidoDos">
+        <div class="cont-datoscliente1">
+                <h2>Datos del cliente</h2>
+                
+                <div class="cont-datosmodal">
+                    <div class="cont-datosCliente">
+                        <p>EMPRESA:</p>
+                        <p>CUIT:</p>
+                        <p>DIRECCION:</p>
+                        <p>LOCALIDAD:</p>
+                        <p>PROVINCIA:</p>
+                        <p>PAIS:</p>
+                        <p>TELEFONO:</p>
+                        <p>CELULAR:</p>
+                        <p>CONTACTO:</p>
+                        <p>EMAIL:</p>
+                        <p>URL:</p>
+                        <p>Condicion IVA:</p> 
+                    </div>
+                
+                    <div class="cont-inputsCliente">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <select name="" id=""></select>
+                    </div>
+                </div>
+        </div>
+            <div class="cont-datoscliente2">
+                <h2>Servicios disponibles</h2>
+                <div class="cont-serviciosDisponibles">
+
+                </div>
+            </div>
+            <div class="cont-datoscliente3">
+                <h2>Servicios contratados</h2>
+                <div class="cont-serviciosContratados">
+
+                </div>
+            </div>
+    </div>
+    
+        
+        <div class="cont-btngrd">
+            <button class="btn-grdEditCliente">Guardar cambios</button>
+        </div>
     
   </div>
 </div>
@@ -179,70 +233,48 @@
                             <th>Contacto</th>
                             <th>Teléfono</th>
                             <th>E-mail</th>
-                            <th>Editar</th>
+                            
                             <th>Estado</th>
-                            <th>Acciones</th>
+                            
                         </thead>
                         <tbody>
                             <tr>
                                 <td>
                                   Abdo Luis
-                                  <button class="btn-editarClient" id="abrir-modal">
-                                    <img height="20px" width="20px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZJJREFUSEvFllFRQzEQRW8VAA6QAAoAB6AAcAAKCgrAAaAAUABVADgABdRBO2cm6eyE5IUkO9P9aTt9ycm9u3m7M20pZlviqgbelXQk6aDxgJ+SFpKWpXUlMMA7SReNwPTxR0nXuQPkwKh7lrQ/CI3LvyWdScKFTaRglH4Y6Kuke0nvjYc4lnQT0sRS4IdWeQrGmvMAuZTE75EAPg8bPNnUWTBqf8NDKD0dIZq1uEWBEntRtQUDIrfESYe9HDxXxdj+FvYl1y98t2BrS+2apWZQkGxOBefSswoLbkPuXcAopXh2JmrDHRzt5b4/BPBX5oXjCk7tBX4liZymuXYDRyiKidrVcwGnUMA5e20BDoNL0Jy9buBeKAfoVjwC7QbTpWgcsZBiTmv2DlttX3k90G7FFkz1tiiNqrtyjMVx9KGZF8eZQjezzce9SUx10GpbHOlOJfC/BgFPMHXA5MEn8RPStUlTqR9PWdf6H1DyXBz26CyMtJ7BnMW+fwoynbk4mcdYizqKqnmg91Sd3at1tnI70Brcnnkfe21d0wAAAABJRU5ErkJggg=="/>
-                                  </button> </td>
+                                   </td>
                                 <td>1</td>
                                 <td>12312313</td>
                                 <td>holahola@hotmail.com</td>
                                 <td>
-                                    <button class="btn-editar">
-                                        <i class="fa-thin fa-magnifying-glass"></i>
-                                        Editar
+                                    <button class="btn-editarClient" id="abrir-modal">
+                                        <img height="20px" width="20px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZJJREFUSEvFllFRQzEQRW8VAA6QAAoAB6AAcAAKCgrAAaAAUABVADgABdRBO2cm6eyE5IUkO9P9aTt9ycm9u3m7M20pZlviqgbelXQk6aDxgJ+SFpKWpXUlMMA7SReNwPTxR0nXuQPkwKh7lrQ/CI3LvyWdScKFTaRglH4Y6Kuke0nvjYc4lnQT0sRS4IdWeQrGmvMAuZTE75EAPg8bPNnUWTBqf8NDKD0dIZq1uEWBEntRtQUDIrfESYe9HDxXxdj+FvYl1y98t2BrS+2apWZQkGxOBefSswoLbkPuXcAopXh2JmrDHRzt5b4/BPBX5oXjCk7tBX4liZymuXYDRyiKidrVcwGnUMA5e20BDoNL0Jy9buBeKAfoVjwC7QbTpWgcsZBiTmv2DlttX3k90G7FFkz1tiiNqrtyjMVx9KGZF8eZQjezzce9SUx10GpbHOlOJfC/BgFPMHXA5MEn8RPStUlTqR9PWdf6H1DyXBz26CyMtJ7BnMW+fwoynbk4mcdYizqKqnmg91Sd3at1tnI70Brcnnkfe21d0wAAAABJRU5ErkJggg=="/>
                                     </button>
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAYFJREFUSEvdlu0xBEEQhp/LgAyEQARHBkSADFwEiAARIAJEwEWADIiADKi3qmera8zY2Z1ZW6X/3F3d9DzT371gJlnMxKUPvAEsge2BD3wB1sBnTi8HFvACOBoIjI/fAKvUA1JgWXcHbFVCg/obcADIC53EYFn67KAPwCXwNPARu8CZhUmqgu94y2OwXHNokGNAv2tE8FO74NaHzoNl7YcdkqX7NUSnK28pQSWbwWoPFkixleyNcG/unXL7o/2pWN/ruwd7t/SV2VBnfJnCucX+f4CVI3LpVSIpJ7M4QEOH62JpLp4EHENfASWUb5dVYNW0SsPXdglURo8GpxpLKbQKrGFx7WpIjV8dLsQ05V5fcqMt1iUxPFzcB62yOEBieAm0CdhbXgptBtZF6uvK8OyGEfXUqhgP7c/hvB8+fzokesfiFNOpaBFoCVbL1OahT8m71XyXE7l5PDaeKT1BFefssndiK21LqPYs3fsj++OdSy9rsdbKul/LrfWKU+yt2cDfcRJ1H22zbD8AAAAASUVORK5CYII="/>
                                 </td>
-                                <td><span class="span-estado-activo">Activo</span></td>
+                            </tr>
+                            <tr>
+                                <td>Abdo Luis</td>
+                                <td>1</td>
+                                <td>12312313</td>
+                                <td>holahola@hotmail.com</td>
                                 <td>
-                                    <button class="btn-website">
-                                        Website
+                                    <button class="btn-editarClient" id="abrir-modal">
+                                        <img height="20px" width="20px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZJJREFUSEvFllFRQzEQRW8VAA6QAAoAB6AAcAAKCgrAAaAAUABVADgABdRBO2cm6eyE5IUkO9P9aTt9ycm9u3m7M20pZlviqgbelXQk6aDxgJ+SFpKWpXUlMMA7SReNwPTxR0nXuQPkwKh7lrQ/CI3LvyWdScKFTaRglH4Y6Kuke0nvjYc4lnQT0sRS4IdWeQrGmvMAuZTE75EAPg8bPNnUWTBqf8NDKD0dIZq1uEWBEntRtQUDIrfESYe9HDxXxdj+FvYl1y98t2BrS+2apWZQkGxOBefSswoLbkPuXcAopXh2JmrDHRzt5b4/BPBX5oXjCk7tBX4liZymuXYDRyiKidrVcwGnUMA5e20BDoNL0Jy9buBeKAfoVjwC7QbTpWgcsZBiTmv2DlttX3k90G7FFkz1tiiNqrtyjMVx9KGZF8eZQjezzce9SUx10GpbHOlOJfC/BgFPMHXA5MEn8RPStUlTqR9PWdf6H1DyXBz26CyMtJ7BnMW+fwoynbk4mcdYizqKqnmg91Sd3at1tnI70Brcnnkfe21d0wAAAABJRU5ErkJggg=="/>
                                     </button>
                                 </td>
                             </tr>
                             <tr>
-                                <td>Abdo Luis<button class="btn-editarClient">
-                                  <img height="20px" width="20px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZJJREFUSEvFllFRQzEQRW8VAA6QAAoAB6AAcAAKCgrAAaAAUABVADgABdRBO2cm6eyE5IUkO9P9aTt9ycm9u3m7M20pZlviqgbelXQk6aDxgJ+SFpKWpXUlMMA7SReNwPTxR0nXuQPkwKh7lrQ/CI3LvyWdScKFTaRglH4Y6Kuke0nvjYc4lnQT0sRS4IdWeQrGmvMAuZTE75EAPg8bPNnUWTBqf8NDKD0dIZq1uEWBEntRtQUDIrfESYe9HDxXxdj+FvYl1y98t2BrS+2apWZQkGxOBefSswoLbkPuXcAopXh2JmrDHRzt5b4/BPBX5oXjCk7tBX4liZymuXYDRyiKidrVcwGnUMA5e20BDoNL0Jy9buBeKAfoVjwC7QbTpWgcsZBiTmv2DlttX3k90G7FFkz1tiiNqrtyjMVx9KGZF8eZQjezzce9SUx10GpbHOlOJfC/BgFPMHXA5MEn8RPStUlTqR9PWdf6H1DyXBz26CyMtJ7BnMW+fwoynbk4mcdYizqKqnmg91Sd3at1tnI70Brcnnkfe21d0wAAAABJRU5ErkJggg=="/>
-                                </button></td>
+                                <td>Abdo Luis </td>
                                 <td>1</td>
                                 <td>12312313</td>
                                 <td>holahola@hotmail.com</td>
                                 <td>
-                                    <button class="btn-editar">
-                                        Editar
-                                    </button>
+                                    <button class="btn-editarClient" id="abrir-modal">
+                                        <img height="20px" width="20px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZJJREFUSEvFllFRQzEQRW8VAA6QAAoAB6AAcAAKCgrAAaAAUABVADgABdRBO2cm6eyE5IUkO9P9aTt9ycm9u3m7M20pZlviqgbelXQk6aDxgJ+SFpKWpXUlMMA7SReNwPTxR0nXuQPkwKh7lrQ/CI3LvyWdScKFTaRglH4Y6Kuke0nvjYc4lnQT0sRS4IdWeQrGmvMAuZTE75EAPg8bPNnUWTBqf8NDKD0dIZq1uEWBEntRtQUDIrfESYe9HDxXxdj+FvYl1y98t2BrS+2apWZQkGxOBefSswoLbkPuXcAopXh2JmrDHRzt5b4/BPBX5oXjCk7tBX4liZymuXYDRyiKidrVcwGnUMA5e20BDoNL0Jy9buBeKAfoVjwC7QbTpWgcsZBiTmv2DlttX3k90G7FFkz1tiiNqrtyjMVx9KGZF8eZQjezzce9SUx10GpbHOlOJfC/BgFPMHXA5MEn8RPStUlTqR9PWdf6H1DyXBz26CyMtJ7BnMW+fwoynbk4mcdYizqKqnmg91Sd3at1tnI70Brcnnkfe21d0wAAAABJRU5ErkJggg=="/>
+                                      </button>
+                                      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAYFJREFUSEvdlu0xBEEQhp/LgAyEQARHBkSADFwEiAARIAJEwEWADIiADKi3qmera8zY2Z1ZW6X/3F3d9DzT371gJlnMxKUPvAEsge2BD3wB1sBnTi8HFvACOBoIjI/fAKvUA1JgWXcHbFVCg/obcADIC53EYFn67KAPwCXwNPARu8CZhUmqgu94y2OwXHNokGNAv2tE8FO74NaHzoNl7YcdkqX7NUSnK28pQSWbwWoPFkixleyNcG/unXL7o/2pWN/ruwd7t/SV2VBnfJnCucX+f4CVI3LpVSIpJ7M4QEOH62JpLp4EHENfASWUb5dVYNW0SsPXdglURo8GpxpLKbQKrGFx7WpIjV8dLsQ05V5fcqMt1iUxPFzcB62yOEBieAm0CdhbXgptBtZF6uvK8OyGEfXUqhgP7c/hvB8+fzokesfiFNOpaBFoCVbL1OahT8m71XyXE7l5PDaeKT1BFefssndiK21LqPYs3fsj++OdSy9rsdbKul/LrfWKU+yt2cDfcRJ1H22zbD8AAAAASUVORK5CYII="/>
                                 </td>
-                                <td><span class="span-estado-inact">Inactivo</span></td>
-                                <td>
-                                    <button class="btn-website">
-                                        Website
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Abdo Luis <button class="btn-editarClient">
-                                  <img height="20px" width="20px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZJJREFUSEvFllFRQzEQRW8VAA6QAAoAB6AAcAAKCgrAAaAAUABVADgABdRBO2cm6eyE5IUkO9P9aTt9ycm9u3m7M20pZlviqgbelXQk6aDxgJ+SFpKWpXUlMMA7SReNwPTxR0nXuQPkwKh7lrQ/CI3LvyWdScKFTaRglH4Y6Kuke0nvjYc4lnQT0sRS4IdWeQrGmvMAuZTE75EAPg8bPNnUWTBqf8NDKD0dIZq1uEWBEntRtQUDIrfESYe9HDxXxdj+FvYl1y98t2BrS+2apWZQkGxOBefSswoLbkPuXcAopXh2JmrDHRzt5b4/BPBX5oXjCk7tBX4liZymuXYDRyiKidrVcwGnUMA5e20BDoNL0Jy9buBeKAfoVjwC7QbTpWgcsZBiTmv2DlttX3k90G7FFkz1tiiNqrtyjMVx9KGZF8eZQjezzce9SUx10GpbHOlOJfC/BgFPMHXA5MEn8RPStUlTqR9PWdf6H1DyXBz26CyMtJ7BnMW+fwoynbk4mcdYizqKqnmg91Sd3at1tnI70Brcnnkfe21d0wAAAABJRU5ErkJggg=="/>
-                                </button></td>
-                                <td>1</td>
-                                <td>12312313</td>
-                                <td>holahola@hotmail.com</td>
-                                <td>
-                                    <button class="btn-editar">
-                                        Editar
-                                    </button>
-                                </td>
-                                <td><span class="span-estado-activo">Activo</span></td>
-                                <td>
-                                    <button class="btn-website">
-                                        Website
-                                    </button>
-                                </td>
+                                
                             </tr>
                         </tbody>
                     </table>
@@ -257,9 +289,9 @@
                             <th>Contacto</th>
                             <th>Teléfono</th>
                             <th>E-mail</th>
-                            <th>Editar</th>
+                            
                             <th>Estado</th>
-                            <th>Acciones</th>
+                            
                         </thead>
                         <tbody>
                             <tr>
@@ -268,17 +300,9 @@
                                 <td>12312313</td>
                                 <td>holahola@hotmail.com</td>
                                 <td>
-                                    <button class="btn-editar">
-                                        <i class="fa-thin fa-magnifying-glass"></i>
-                                        Editar
-                                    </button>
+                                    
                                 </td>
-                                <td><span class="span-estado-activo">Activo</span></td>
-                                <td>
-                                    <button class="btn-website">
-                                        Website
-                                    </button>
-                                </td>
+                                
                             </tr>
                             <tr>
                                 <td>Abdo Luis</td>
@@ -286,16 +310,23 @@
                                 <td>12312313</td>
                                 <td>holahola@hotmail.com</td>
                                 <td>
-                                    <button class="btn-editar">
-                                        Editar
-                                    </button>
+                                    
                                 </td>
-                                <td><span class="span-estado-inact">Inactivo</span></td>
-                                <td>
-                                    <button class="btn-website">
-                                        Website
-                                    </button>
-                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td>Abdo Luis</td>
+                                <td>1</td>
+                                <td>12312313</td>
+                                <td>holahola@hotmail.com</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Abdo Luis</td>
+                                <td>1</td>
+                                <td>12312313</td>
+                                <td>holahola@hotmail.com</td>
+                                <td></td>
                             </tr>
                             <tr>
                                 <td>Abdo Luis</td>
@@ -303,51 +334,7 @@
                                 <td>12312313</td>
                                 <td>holahola@hotmail.com</td>
                                 <td>
-                                    <button class="btn-editar">
-                                        Editar
-                                    </button>
-                                </td>
-                                <td><span class="span-estado-activo">Activo</span></td>
-                                <td>
-                                    <button class="btn-website">
-                                        Website
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Abdo Luis</td>
-                                <td>1</td>
-                                <td>12312313</td>
-                                <td>holahola@hotmail.com</td>
-                                <td>
-                                    <button class="btn-editar">
-                                        <i class="fa-thin fa-magnifying-glass"></i>
-                                        Editar
-                                    </button>
-                                </td>
-                                <td><span class="span-estado-activo">Activo</span></td>
-                                <td>
-                                    <button class="btn-website">
-                                        Website
-                                    </button>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Abdo Luis</td>
-                                <td>1</td>
-                                <td>12312313</td>
-                                <td>holahola@hotmail.com</td>
-                                <td>
-                                    <button class="btn-editar">
-                                        <i class="fa-thin fa-magnifying-glass"></i>
-                                        Editar
-                                    </button>
-                                </td>
-                                <td><span class="span-estado-activo">Activo</span></td>
-                                <td>
-                                    <button class="btn-website">
-                                        Website
-                                    </button>
+
                                 </td>
                             </tr>
                         </tbody>
@@ -362,9 +349,9 @@
                         <th>Contacto</th>
                         <th>Teléfono</th>
                         <th>E-mail</th>
-                        <th>Editar</th>
+                        
                         <th>Estado</th>
-                        <th>Acciones</th>
+                        
                     </thead>
                     <tbody>
                         <tr>
@@ -372,52 +359,21 @@
                             <td>1</td>
                             <td>12312313</td>
                             <td>holahola@hotmail.com</td>
-                            <td>
-                                <button class="btn-editar">
-                                    <i class="fa-thin fa-magnifying-glass"></i>
-                                    Editar
-                                </button>
-                            </td>
-                            <td><span class="span-estado-activo">Activo</span></td>
-                            <td>
-                                <button class="btn-website">
-                                    Website
-                                </button>
-                            </td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>Abdo Luis</td>
                             <td>1</td>
                             <td>12312313</td>
                             <td>holahola@hotmail.com</td>
-                            <td>
-                                <button class="btn-editar">
-                                    Editar
-                                </button>
-                            </td>
-                            <td><span class="span-estado-inact">Inactivo</span></td>
-                            <td>
-                                <button class="btn-website">
-                                    Website
-                                </button>
-                            </td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>Abdo Luis</td>
                             <td>1</td>
                             <td>12312313</td>
                             <td>holahola@hotmail.com</td>
-                            <td>
-                                <button class="btn-editar">
-                                    Editar
-                                </button>
-                            </td>
-                            <td><span class="span-estado-activo">Activo</span></td>
-                            <td>
-                                <button class="btn-website">
-                                    Website
-                                </button>
-                            </td>
+                            <td></td>
                         </tr>
                     </tbody>
                 </table>

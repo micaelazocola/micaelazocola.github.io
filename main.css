@@ -557,7 +557,11 @@ body.shrink .tooltip {
     width: 99%;
     
   }
-  
+  table img{
+    margin-right: 8px;
+    width: 28px;
+    height: 28px;
+  }
   th, td {
     text-align: center;
     padding: 8px;
@@ -665,10 +669,17 @@ body.shrink .tooltip {
     padding: 20px;
     border: 1px solid #888;
     width: 1000px;
-    height: 500px;
+    height: 530px;
     border-radius: 30px;
-  }
   
+    
+  }
+  .modal-contenido div{
+    padding: 4px;
+  }
+  .modal-contenidoDos{
+    display: flex;
+  }
   .cerrar-modal {
     color: #aaaaaa;
     float: right;
@@ -685,3 +696,79 @@ body.shrink .tooltip {
   .titulo-editarclient{
     font-size: 20px;
   }
+  .cont-datosmodal{
+    display: grid;
+    grid-template-columns: 130px 300px;
+    border: #cfcde7 solid 1px;
+    padding: 5px;
+    width: 330px;
+    border-radius: 10px;
+  }
+  .cont-datoscliente1{
+    
+  }
+  .cont-datoscliente1 h2 {
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+
+  .cont-datoscliente1 p{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 5px;
+    font-weight: lighter;
+    font-size: 16.5px;
+  }
+  .cont-datoscliente1 select{
+    width: 165.6px;
+    margin: 5px;
+  }
+  .cont-datoscliente1 input{
+    margin: 5px;
+  }
+
+
+  .cont-datoscliente2 h2 {
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+  }
+  .cont-serviciosDisponibles{
+      border: #cfcde7 solid 1px;
+      padding: 10px;
+      width: 300px;
+      border-radius: 10px;
+      height: 368px;
+  }
+ 
+  .cont-datoscliente3 h2 {
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  .cont-serviciosContratados{
+    border: #cfcde7 solid 1px;
+      padding: 10px;
+      width: 300px;
+      border-radius: 10px;
+      height: 368px;
+  }
+  .cont-btngrd{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .btn-grdEditCliente{
+    background-color: #6476cf;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 1px rgba(52, 51, 51, 0.2);
+    
+    width: 130px;
+    height: 30px;
+    border: #3145a8;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
