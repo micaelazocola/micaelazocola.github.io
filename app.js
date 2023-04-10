@@ -87,9 +87,14 @@ li.forEach((cadaLi, i)=> {
 // funcion del modal
 
 const botonAbrirModal = document.getElementById("abrir-modal");
+const botonAbrirModal2 = document.getElementById("abrir-modal2");
+const botonAbrirModal3 = document.getElementById("abrir-modal3");
 const modal = document.getElementById("mi-modal");
 const botonCerrarModal = document.getElementsByClassName("cerrar-modal")[0];
 
+
+botonAbrirModal2.addEventListener('click', mostrarModal);
+botonAbrirModal3.addEventListener('click', mostrarModal);
 botonAbrirModal.onclick = function() {
   modal.style.display = "block";
 }
@@ -103,5 +108,9 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+function mostrarModal() {
+  modal.style.display = 'block';
+}
+
 
 // fin de funcion del modal
