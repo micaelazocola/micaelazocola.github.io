@@ -59,6 +59,8 @@ nav {
   transition: width 0.5s ease-in-out;
   border-radius: 20px;
   z-index: 999;
+  margin-left: 10px;
+  margin-top: 10px;
 }
 
 nav::before {
@@ -375,6 +377,9 @@ nav:hover .shrink-btn,
 
 body.shrink nav {
   width: 5.4rem;
+  margin-left: 10px;
+  margin-top: 10px;
+
 }
 
 body.shrink .hide {
