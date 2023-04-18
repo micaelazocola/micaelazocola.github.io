@@ -49,7 +49,7 @@ ul {
 
 nav {
   position: sticky;
-  height: 100vh;
+  height: 99vh;
   background-color: var(--main-color);
   width: 16rem;
   padding: 1.8rem 0.85rem;
@@ -60,7 +60,7 @@ nav {
   border-radius: 20px;
   z-index: 999;
   margin-left: 10px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 nav::before {
@@ -378,7 +378,7 @@ nav:hover .shrink-btn,
 body.shrink nav {
   width: 5.4rem;
   margin-left: 10px;
-  margin-top: 10px;
+  margin-top: 5px;
 
 }
 
@@ -512,6 +512,7 @@ position: absolute;
   .cont-buscar-agregar{
     display: flex;
     justify-content: space-between;
+    align-items: center;
   }
   .btn-agregarProv{
     display: inline-flex;
@@ -662,7 +663,7 @@ position: absolute;
   }
 
   .btn-website{
-    background-color: #6476cf;
+    background-color: #3248b5;
     color: white;
     border-radius: 15px;
     box-shadow: 2px 2px 2px 1px rgba(52, 51, 51, 0.2);
@@ -818,13 +819,13 @@ position: absolute;
   }
 
   .btn-grdEditCliente{
-    background-color: #6476cf;
+    background-color: #374ec2;
     color: white;
-    border-radius: 15px;
+    border-radius: 30px;
     box-shadow: 2px 2px 2px 1px rgba(52, 51, 51, 0.2);
     
-    width: 130px;
-    height: 30px;
+    width: 170px;
+    height: 35px;
     border: #3145a8;
     cursor: pointer;
     font-family: 'Roboto', sans-serif;
@@ -907,5 +908,8 @@ position: absolute;
 /* //////fin tooltips de clientes ////////////////////////////////////////////////////////*/
 
 
-
+.calendario-google {
+  display: flex;
+  justify-content: center;
+}
 
