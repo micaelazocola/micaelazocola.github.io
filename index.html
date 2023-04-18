@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/main.css">
-    
+    <link rel="stylesheet" href="/modal-Editar-proveedores.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <title>TREELAN - Gestion</title>
 </head>
@@ -35,7 +35,7 @@
         <div class="sidebar-links">
           <ul>
             <div class="active-tab"></div>
-            <li class="tooltip-element" data-tooltip="0">
+            <li class="tooltip-element li-nav" data-tooltip="0">
               <a href="#" class="active" data-active="0">
                 <div class="icon">
                   <i class='bx bx-tachometer'></i>
@@ -44,7 +44,7 @@
                 <span class="link hide">Inicio</span>
               </a>
             </li>
-            <li class="tooltip-element" data-tooltip="1">
+            <li class="tooltip-element li-nav" data-tooltip="1">
               <a href="#" data-active="1">
                 <div class="icon">
                   <i class='bx bx-folder'></i>
@@ -215,7 +215,13 @@
   </div>
 </div>
 
-        <div class="contenedor-tabs">
+
+
+
+
+
+    <div class="contenedor-tabs">
+            <div class="bloque-nav activo ">
         <ul class="ul">
             <li class="li activo">Clientes</li>
             <li class="li">Online</li>
@@ -224,8 +230,18 @@
             <li class="li">Whatsapp</li>
         </ul>
         <div class="subcontenedor">
+            <div class="cont-buscar-agregar">
+                    <div class="buscar-span"><p>Buscar:</p> <input type="text"></div>
+                    <button type="button" class="btn-agregarCliente" id="btn-agregarCliente"> 
+                         <span class="button--text">Agregar cliente</span>
+                         <span class="button--icon">
+                            <ion-icon name="add-circle-outline"></ion-icon>
+                         </span>
+                    </button>
+                </div>
             <div class="bloque activo bloque1">
-                <div class="buscar-span"><p>Buscar:</p> <input type="text"></div>
+                
+                
                 <div class="contenedor-tabla">
                     <table>
                         <thead>
@@ -233,6 +249,7 @@
                             <th>Contacto</th>
                             <th>Teléfono</th>
                             <th>E-mail</th>
+                            <th>Facturación</th>
                             <th>Estado</th>
                             
                         </thead>
@@ -245,10 +262,47 @@
                                 <td>12312313</td>
                                 <td>holahola@hotmail.com</td>
                                 <td>
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAslJREFUSEvFll9S2zAQxr91Ql+hJyjMoEz7VIcThBM0nKD0BE1O0HAC6AkKJyA9QdsLYPHUjpUZOEJ4TuLtrGwZ2SSxzEv0lljSb/fT/iPsaNGOuGgNPjbxAMA+gLgwWgM0n6nkTxsngsAqjWNE0VcwDwEcbADMQTTtLLKLfx/0Y5MRW8GHD/HB3iq6BPN500WV70TXi042fjzS803nNoJzL+kWjMPyMOMG4N8AtOlpLf/bfUBMREMGPnkgDeYvbl/dgLVgexnRLycrAT+jJY+aJHz/Nz7MunTlGTAH8+k6+AtwLi8lzlMGjWfq7qqN1MfmZETgSxd8iy6f1mV/AVZp/xqEz3LoNVBnYAXOuDG9pBInFXAhcSKHRd5UJRLFr14905862TtLPvKfqgZ+9ra+sYnugsz09LXbK2++6tKD/V3zugo2fQn//fqmIKgLxjySS7jn9dyo5K27qwRLRSLYSEaRBuXhbeB6BtSNVml8DqIfudN8OlNa0vG5ZPZm8ZCZbgtwf1P++UY0Qcs8J8rjhvgsPdbTKticTBj8Tf40KimVsOm1lELCY9+YEKgzUpk+5zC6SNXdpBFcQEV+qU5lMWgDtV5vBW+Q2s/rAj4GkRSHvFmsydE1z7FZ6m3BVYM/39sALd54e3AVkth0Wlc8XsADoHKnl05PRiVlS21VQEp4IDS8gORdyb4Hg6YzdXdWz2HJS79AbMvx4JKZv8kOmoSAJYXeLEkz8K4oJiPT09+byqb/vdYW7xddHjS2Ra/aSGmToc7K3l1m45BBYNmNLgl2NpP1BOZB0CBQVps0lnFG2lrueWFARNmUM9z7ow9F+JhxNPSAsv1eZrVWo48D2cq1oCs3GATLzbhZ7PHoVcOeD7Fp0aEJCCKhlX/NegJj2lnxpOlJ5GzQXF0NnHgQEQ7AUT7QU6Yzxty1u1BVWoNDL27atzPwf4iLuS6LVk3wAAAAAElFTkSuQmCC"/>
+                                </td>
+                                <td>
                                     <button class="btn-editarClient" id="abrir-modal">
                                         <img height="20px" width="20px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZJJREFUSEvFllFRQzEQRW8VAA6QAAoAB6AAcAAKCgrAAaAAUABVADgABdRBO2cm6eyE5IUkO9P9aTt9ycm9u3m7M20pZlviqgbelXQk6aDxgJ+SFpKWpXUlMMA7SReNwPTxR0nXuQPkwKh7lrQ/CI3LvyWdScKFTaRglH4Y6Kuke0nvjYc4lnQT0sRS4IdWeQrGmvMAuZTE75EAPg8bPNnUWTBqf8NDKD0dIZq1uEWBEntRtQUDIrfESYe9HDxXxdj+FvYl1y98t2BrS+2apWZQkGxOBefSswoLbkPuXcAopXh2JmrDHRzt5b4/BPBX5oXjCk7tBX4liZymuXYDRyiKidrVcwGnUMA5e20BDoNL0Jy9buBeKAfoVjwC7QbTpWgcsZBiTmv2DlttX3k90G7FFkz1tiiNqrtyjMVx9KGZF8eZQjezzce9SUx10GpbHOlOJfC/BgFPMHXA5MEn8RPStUlTqR9PWdf6H1DyXBz26CyMtJ7BnMW+fwoynbk4mcdYizqKqnmg91Sd3at1tnI70Brcnnkfe21d0wAAAABJRU5ErkJggg=="/>
                                     </button>
-                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAYFJREFUSEvdlu0xBEEQhp/LgAyEQARHBkSADFwEiAARIAJEwEWADIiADKi3qmera8zY2Z1ZW6X/3F3d9DzT371gJlnMxKUPvAEsge2BD3wB1sBnTi8HFvACOBoIjI/fAKvUA1JgWXcHbFVCg/obcADIC53EYFn67KAPwCXwNPARu8CZhUmqgu94y2OwXHNokGNAv2tE8FO74NaHzoNl7YcdkqX7NUSnK28pQSWbwWoPFkixleyNcG/unXL7o/2pWN/ruwd7t/SV2VBnfJnCucX+f4CVI3LpVSIpJ7M4QEOH62JpLp4EHENfASWUb5dVYNW0SsPXdglURo8GpxpLKbQKrGFx7WpIjV8dLsQ05V5fcqMt1iUxPFzcB62yOEBieAm0CdhbXgptBtZF6uvK8OyGEfXUqhgP7c/hvB8+fzokesfiFNOpaBFoCVbL1OahT8m71XyXE7l5PDaeKT1BFefssndiK21LqPYs3fsj++OdSy9rsdbKul/LrfWKU+yt2cDfcRJ1H22zbD8AAAAASUVORK5CYII="/>
+                                    <img  height="20px" width="20px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAYFJREFUSEvdlu0xBEEQhp/LgAyEQARHBkSADFwEiAARIAJEwEWADIiADKi3qmera8zY2Z1ZW6X/3F3d9DzT371gJlnMxKUPvAEsge2BD3wB1sBnTi8HFvACOBoIjI/fAKvUA1JgWXcHbFVCg/obcADIC53EYFn67KAPwCXwNPARu8CZhUmqgu94y2OwXHNokGNAv2tE8FO74NaHzoNl7YcdkqX7NUSnK28pQSWbwWoPFkixleyNcG/unXL7o/2pWN/ruwd7t/SV2VBnfJnCucX+f4CVI3LpVSIpJ7M4QEOH62JpLp4EHENfASWUb5dVYNW0SsPXdglURo8GpxpLKbQKrGFx7WpIjV8dLsQ05V5fcqMt1iUxPFzcB62yOEBieAm0CdhbXgptBtZF6uvK8OyGEfXUqhgP7c/hvB8+fzokesfiFNOpaBFoCVbL1OahT8m71XyXE7l5PDaeKT1BFefssndiK21LqPYs3fsj++OdSy9rsdbKul/LrfWKU+yt2cDfcRJ1H22zbD8AAAAASUVORK5CYII="/>
+                                    <img  height="20px" width="20px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAShJREFUSEvt1uERATEQBeB3laATKkElqASV0AmdMO8mMXuxye3mYu6P/MT5kk32XTrMNLqZXEyBlwDWAC41k6+FzwB2ATwCOHnxGlii0XPjXliiz6Cy5Bwu3AOn6B4A8RsAN26FNfQuVuzGLXAJjXvMFbvwMdiCVuEl2IO68Rxcg7pwDZ6CmvEUTsPB1ZtJeh1Cb6shI2FGIGE5WsL8X/Z+n+0SZuCzJX4JbwD0/Z+Wmv0Ye1KLQVZlm3khXJM3lSw1QaZcjNnsa/Gl5K+2Fekc5NZI+OsQ59pJgx+hGoOZi9hkpfjdKnzWDNYmE1esIX94cB48e/wvtSxds8PFBGOStRhMKgaIaY8tYWGd1Ccm5QOli0C8sC+sgvK77H177OozwSw/Ohv8BpqJcx8QGOPVAAAAAElFTkSuQmCC"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                  Abdo Luis M.
+                                   </td>
+                                <td>1</td>
+                                <td>12312313</td>
+                                <td>holahola@hotmail.com</td>
+                                <td>
+                                    <span  class="tooltip-icon">
+                                        <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAadJREFUSEvtlu01BEEQRd9mQASIABEgAyKwIkAEiAARIAIysCIgA0RACM6dU7WnpvV8nJ5h/NB/dqc/6la9ru7qmSZqs4m4agKvSPpscYrxQxu/6zH3m60ceEvSvaTtBoNAnyWtG/itZa7bOpD0EgNJwUx8lIRxJgL3Rt+xpHmA+hjwW0nXibP0r1kftviuWgoGtmljR2aMz11TAXhbQ1KiW9gknLyx/7VAIvhE0qVNupB0nlncNxej09g5s4Wnkq7SiF2W9yAl0rOfJQ1pfV/dNr8bEYyU7C0teotkOyVUk3svoxp9C5c6yrFqyTAkWvfVoyY3PuI2OpiM5FxGmaMzhUEr5orLzbmfO9glfbIMBjREZnc0Z6/qmxxMirOnZCHH6icirjHaisTYUtfy5B8c5ZhE6lilSs8w6yga3FS1kpje1Q4YC+r2svA0ubjaXq0eD4k0XQuc4rB8iaTgWCzGBGOrKg5u9DfBsUxmH3t+w4wZMQWC18iy/bnnbVO0bTW6JmWXXCUR5+p0rLtdzGq8BMw6jt2+ER46HvRZR0rBvaJqmzQZ+At5uWgf1mirMAAAAABJRU5ErkJggg=="/>
+                                
+                                    
+                                    <span class="tooltip-box">Notificar</span>
+                                    </span>
+                                    
+                                    <span  class="tooltip-icon">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAATxJREFUSEvVl41NAkEQhT86sAPpQDsQO4AOLMEOhErECqQDtAPsQCpQKoC85JYMyx3DshN+NrmEcHvz7b57vB16XGj0LsTlasB94D5AhRWwOFTH7vgFeA+AphIjYNZVz4LHwFsgeAKoZuvoAj9XLGDePHsSuMZ06wjwsWZbAr8NMAR87Hu3st42WFLr8oZkDpXaA7bdD5G6xlxTQFcaO2nW9TtO39eYq02NbZqdG7x1vweuMdeHkXovzTxwlLn2DHcq+A54MKvykisMPACSfOJ7yXX7YEn9aKT2kitsx4dMl0O0yL/8qLTmGgKfzYQ8dUrcrXZHMKmgAJIyr00BNRhf+pwf+GrQrFtLgN7cH/t6crACQ7t98qoU3v8G1EymE6yzr87NU8jZmS4V//MCNb1VzWKu559E1S5KHt4AqN1uH/wtyK4AAAAASUVORK5CYII="/>
+                                
+                                    
+                                    <span class="tooltip-box">Facturar</span>
+                                    </span>
+                                        
+                                    
+                                    
+                                <td>
+                                    
+                                    <button class="btn-editarClient" id="abrir-modal2">
+                                        
+                                        <img height="20px" width="20px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZJJREFUSEvFllFRQzEQRW8VAA6QAAoAB6AAcAAKCgrAAaAAUABVADgABdRBO2cm6eyE5IUkO9P9aTt9ycm9u3m7M20pZlviqgbelXQk6aDxgJ+SFpKWpXUlMMA7SReNwPTxR0nXuQPkwKh7lrQ/CI3LvyWdScKFTaRglH4Y6Kuke0nvjYc4lnQT0sRS4IdWeQrGmvMAuZTE75EAPg8bPNnUWTBqf8NDKD0dIZq1uEWBEntRtQUDIrfESYe9HDxXxdj+FvYl1y98t2BrS+2apWZQkGxOBefSswoLbkPuXcAopXh2JmrDHRzt5b4/BPBX5oXjCk7tBX4liZymuXYDRyiKidrVcwGnUMA5e20BDoNL0Jy9buBeKAfoVjwC7QbTpWgcsZBiTmv2DlttX3k90G7FFkz1tiiNqrtyjMVx9KGZF8eZQjezzce9SUx10GpbHOlOJfC/BgFPMHXA5MEn8RPStUlTqR9PWdf6H1DyXBz26CyMtJ7BnMW+fwoynbk4mcdYizqKqnmg91Sd3at1tnI70Brcnnkfe21d0wAAAABJRU5ErkJggg=="/>
+                                    </button>
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZFJREFUSEvFl9tRxDAMRbWVAJUAlQCVAJVAJ0AlQCUwZyfK3Ghlx44Dqxk+sB0dvSxrD3YmOZyJay3gSzO76zDw28y+zOy99k0N/GhmTx3AeBT4q5k9ZzoyMB6+mNnNAFQ/xYDbKQrzegZ+EyjhwuJq2IKBGI7RpMeNB36l5yJYw0uYHga9Vn2kbQ57BP9MIDwkPHuIR3DhtYIJC4cQPMXjPUT14swxbQq+n4qKdfKBhSrsX5SqdMrndbJPzj+jQwrWfMQUuFGlK6JeLXI5AT2F814vGD0RrlD253BKuDaD0aGpcPiH1EUJyvoQOIOTP5fMU98bBkd4C3QXj1ESc1rtyaPF5Z5FqK+vwYdCnVWvPyhZtWsP2AyuXZms2uNTuBmszSWrXoVn7XYzmLAB596WnkjgSNbjHTwb1dq5Qtvu+jd9A/4DrIPFzPtrMCOUp6A4CNRep57YcsX4Q5+PPieDRcnjHtDaWZoLRbUoytIgsKasdT97m4/fKtinQ6aMUalduxPwKKzr+5afMF0KWw//ArPHfR++3U+RAAAAAElFTkSuQmCC"/>
                                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAShJREFUSEvt1uERATEQBeB3laATKkElqASV0AmdMO8mMXuxye3mYu6P/MT5kk32XTrMNLqZXEyBlwDWAC41k6+FzwB2ATwCOHnxGlii0XPjXliiz6Cy5Bwu3AOn6B4A8RsAN26FNfQuVuzGLXAJjXvMFbvwMdiCVuEl2IO68Rxcg7pwDZ6CmvEUTsPB1ZtJeh1Cb6shI2FGIGE5WsL8X/Z+n+0SZuCzJX4JbwD0/Z+Wmv0Ye1KLQVZlm3khXJM3lSw1QaZcjNnsa/Gl5K+2Fekc5NZI+OsQ59pJgx+hGoOZi9hkpfjdKnzWDNYmE1esIX94cB48e/wvtSxds8PFBGOStRhMKgaIaY8tYWGd1Ccm5QOli0C8sC+sgvK77H177OozwSw/Ohv8BpqJcx8QGOPVAAAAAElFTkSuQmCC"/>
                                 </td>
                             </tr>
@@ -260,6 +314,22 @@
                                 <td>12312313</td>
                                 <td>holahola@hotmail.com</td>
                                 <td>
+                                    <span  class="tooltip-icon">
+                                        <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAadJREFUSEvtlu01BEEQRd9mQASIABEgAyKwIkAEiAARIAIysCIgA0RACM6dU7WnpvV8nJ5h/NB/dqc/6la9ru7qmSZqs4m4agKvSPpscYrxQxu/6zH3m60ceEvSvaTtBoNAnyWtG/itZa7bOpD0EgNJwUx8lIRxJgL3Rt+xpHmA+hjwW0nXibP0r1kftviuWgoGtmljR2aMz11TAXhbQ1KiW9gknLyx/7VAIvhE0qVNupB0nlncNxej09g5s4Wnkq7SiF2W9yAl0rOfJQ1pfV/dNr8bEYyU7C0teotkOyVUk3svoxp9C5c6yrFqyTAkWvfVoyY3PuI2OpiM5FxGmaMzhUEr5orLzbmfO9glfbIMBjREZnc0Z6/qmxxMirOnZCHH6icirjHaisTYUtfy5B8c5ZhE6lilSs8w6yga3FS1kpje1Q4YC+r2svA0ubjaXq0eD4k0XQuc4rB8iaTgWCzGBGOrKg5u9DfBsUxmH3t+w4wZMQWC18iy/bnnbVO0bTW6JmWXXCUR5+p0rLtdzGq8BMw6jt2+ER46HvRZR0rBvaJqmzQZ+At5uWgf1mirMAAAAABJRU5ErkJggg=="/>
+                                
+                                    
+                                    <span class="tooltip-box">Notificar</span>
+                                    </span>
+
+                                    <span  class="tooltip-icon">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAATxJREFUSEvVl41NAkEQhT86sAPpQDsQO4AOLMEOhErECqQDtAPsQCpQKoC85JYMyx3DshN+NrmEcHvz7b57vB16XGj0LsTlasB94D5AhRWwOFTH7vgFeA+AphIjYNZVz4LHwFsgeAKoZuvoAj9XLGDePHsSuMZ06wjwsWZbAr8NMAR87Hu3st42WFLr8oZkDpXaA7bdD5G6xlxTQFcaO2nW9TtO39eYq02NbZqdG7x1vweuMdeHkXovzTxwlLn2DHcq+A54MKvykisMPACSfOJ7yXX7YEn9aKT2kitsx4dMl0O0yL/8qLTmGgKfzYQ8dUrcrXZHMKmgAJIyr00BNRhf+pwf+GrQrFtLgN7cH/t6crACQ7t98qoU3v8G1EymE6yzr87NU8jZmS4V//MCNb1VzWKu559E1S5KHt4AqN1uH/wtyK4AAAAASUVORK5CYII="/>
+                                
+                                    
+                                    <span class="tooltip-box">Facturar</span>
+                                    </span>
+                                    
+                                <td>
+                                    
                                     <button class="btn-editarClient" id="abrir-modal2">
                                         
                                         <img height="20px" width="20px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZJJREFUSEvFllFRQzEQRW8VAA6QAAoAB6AAcAAKCgrAAaAAUABVADgABdRBO2cm6eyE5IUkO9P9aTt9ycm9u3m7M20pZlviqgbelXQk6aDxgJ+SFpKWpXUlMMA7SReNwPTxR0nXuQPkwKh7lrQ/CI3LvyWdScKFTaRglH4Y6Kuke0nvjYc4lnQT0sRS4IdWeQrGmvMAuZTE75EAPg8bPNnUWTBqf8NDKD0dIZq1uEWBEntRtQUDIrfESYe9HDxXxdj+FvYl1y98t2BrS+2apWZQkGxOBefSswoLbkPuXcAopXh2JmrDHRzt5b4/BPBX5oXjCk7tBX4liZymuXYDRyiKidrVcwGnUMA5e20BDoNL0Jy9buBeKAfoVjwC7QbTpWgcsZBiTmv2DlttX3k90G7FFkz1tiiNqrtyjMVx9KGZF8eZQjezzce9SUx10GpbHOlOJfC/BgFPMHXA5MEn8RPStUlTqR9PWdf6H1DyXBz26CyMtJ7BnMW+fwoynbk4mcdYizqKqnmg91Sd3at1tnI70Brcnnkfe21d0wAAAABJRU5ErkJggg=="/>
@@ -267,13 +337,31 @@
                                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZFJREFUSEvFl9tRxDAMRbWVAJUAlQCVAJVAJ0AlQCUwZyfK3Ghlx44Dqxk+sB0dvSxrD3YmOZyJay3gSzO76zDw28y+zOy99k0N/GhmTx3AeBT4q5k9ZzoyMB6+mNnNAFQ/xYDbKQrzegZ+EyjhwuJq2IKBGI7RpMeNB36l5yJYw0uYHga9Vn2kbQ57BP9MIDwkPHuIR3DhtYIJC4cQPMXjPUT14swxbQq+n4qKdfKBhSrsX5SqdMrndbJPzj+jQwrWfMQUuFGlK6JeLXI5AT2F814vGD0RrlD253BKuDaD0aGpcPiH1EUJyvoQOIOTP5fMU98bBkd4C3QXj1ESc1rtyaPF5Z5FqK+vwYdCnVWvPyhZtWsP2AyuXZms2uNTuBmszSWrXoVn7XYzmLAB596WnkjgSNbjHTwb1dq5Qtvu+jd9A/4DrIPFzPtrMCOUp6A4CNRep57YcsX4Q5+PPieDRcnjHtDaWZoLRbUoytIgsKasdT97m4/fKtinQ6aMUalduxPwKKzr+5afMF0KWw//ArPHfR++3U+RAAAAAElFTkSuQmCC"/>
                                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAShJREFUSEvt1uERATEQBeB3laATKkElqASV0AmdMO8mMXuxye3mYu6P/MT5kk32XTrMNLqZXEyBlwDWAC41k6+FzwB2ATwCOHnxGlii0XPjXliiz6Cy5Bwu3AOn6B4A8RsAN26FNfQuVuzGLXAJjXvMFbvwMdiCVuEl2IO68Rxcg7pwDZ6CmvEUTsPB1ZtJeh1Cb6shI2FGIGE5WsL8X/Z+n+0SZuCzJX4JbwD0/Z+Wmv0Ye1KLQVZlm3khXJM3lSw1QaZcjNnsa/Gl5K+2Fekc5NZI+OsQ59pJgx+hGoOZi9hkpfjdKnzWDNYmE1esIX94cB48e/wvtSxds8PFBGOStRhMKgaIaY8tYWGd1Ccm5QOli0C8sC+sgvK77H177OozwSw/Ohv8BpqJcx8QGOPVAAAAAElFTkSuQmCC"/>
                                 </td>
-                            </tr><tr>
+                            </tr>
+                            <tr>
                                 <td>
                                   Abdo Luis M.
                                    </td>
                                 <td>1</td>
                                 <td>12312313</td>
                                 <td>holahola@hotmail.com</td>
+                                <td>
+                                    <span  class="tooltip-icon">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAihJREFUSEvtlsFV20AQhmc22Kcg4woIFQRXEPsgmWOoAKcCoIKQCgIVBCogR3t1wFQQdxClAoTgJCNP3ohdZSVWyDIEcUAnPe3sfDP/zGoWoaEHG+KCFXzV7290p9OwLCheF63WHq8v5vOzKlvb+gPwretuLxDPkzju2TYw9F27/QsAPqjAgjJb7UsQ7b73/ZmZSA6sDC8AYIMAZh0pe9qYgWvt9j4BjAyoXg4Q4PQujk/MYCPXDQBxEwDCRIhedzwO9IYcOPI8jupjukj0xfH9U3692dnp02JxzgFV9ESIQuyuj8dTtotcdwSIP1J3hUQy8PVweIBE35XRt46UR8XNSzeiEfS15x0hwNfUL+JhZzI55vcMnMlC9Mfx/bR+SnquZ+1HEPV0XQ3JA0fKrQyspOTa5iSOPI8l+1Sbeu9n6vj+oKgaCjHgUqQZm3IkcdzlBnlKtjpQnbU6CVdmGVNw5HncRHtgyGwGs1LG9w1l9oru8DNHypEGa0kvHSn7KpjVZf4Xqc1f+q1Z8M1weExE24g4W59MDv5HxkVG6ZB4UkdbpC72yRs4U6QRqc0pteoZVvtCQTQojsTcv1oDnhGqXVrhueZSv7bfS4y/ukKESRxvmbM6B84Ni7quK+z1cNBmLwY2x6S1xvoP88wJ8xzmK1P2vK7rbVm2j83oopRVitXO2DanzblbBbQ217Kb0mPXan1m+2Q+//nYhb7MZ+2Mlw2uyq4x8F8gP1IuWskbNQAAAABJRU5ErkJggg=="/>
+                                
+                                    <span class="tooltip-box">¡Morosidad!</span>
+                                    </span>
+                                    
+                            
+                                    <span  class="tooltip-icon">
+                                        
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAATxJREFUSEvVl41NAkEQhT86sAPpQDsQO4AOLMEOhErECqQDtAPsQCpQKoC85JYMyx3DshN+NrmEcHvz7b57vB16XGj0LsTlasB94D5AhRWwOFTH7vgFeA+AphIjYNZVz4LHwFsgeAKoZuvoAj9XLGDePHsSuMZ06wjwsWZbAr8NMAR87Hu3st42WFLr8oZkDpXaA7bdD5G6xlxTQFcaO2nW9TtO39eYq02NbZqdG7x1vweuMdeHkXovzTxwlLn2DHcq+A54MKvykisMPACSfOJ7yXX7YEn9aKT2kitsx4dMl0O0yL/8qLTmGgKfzYQ8dUrcrXZHMKmgAJIyr00BNRhf+pwf+GrQrFtLgN7cH/t6crACQ7t98qoU3v8G1EymE6yzr87NU8jZmS4V//MCNb1VzWKu559E1S5KHt4AqN1uH/wtyK4AAAAASUVORK5CYII="/>
+                                    <span class="tooltip-box">Facturar</span>
+                                    </span>
+                                    
+
+                                    
+                                </td>
                                 <td>
                                     <button class="btn-editarClient" id="abrir-modal3">
                                         <img height="20px" width="20px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZJJREFUSEvFllFRQzEQRW8VAA6QAAoAB6AAcAAKCgrAAaAAUABVADgABdRBO2cm6eyE5IUkO9P9aTt9ycm9u3m7M20pZlviqgbelXQk6aDxgJ+SFpKWpXUlMMA7SReNwPTxR0nXuQPkwKh7lrQ/CI3LvyWdScKFTaRglH4Y6Kuke0nvjYc4lnQT0sRS4IdWeQrGmvMAuZTE75EAPg8bPNnUWTBqf8NDKD0dIZq1uEWBEntRtQUDIrfESYe9HDxXxdj+FvYl1y98t2BrS+2apWZQkGxOBefSswoLbkPuXcAopXh2JmrDHRzt5b4/BPBX5oXjCk7tBX4liZymuXYDRyiKidrVcwGnUMA5e20BDoNL0Jy9buBeKAfoVjwC7QbTpWgcsZBiTmv2DlttX3k90G7FFkz1tiiNqrtyjMVx9KGZF8eZQjezzce9SUx10GpbHOlOJfC/BgFPMHXA5MEn8RPStUlTqR9PWdf6H1DyXBz26CyMtJ7BnMW+fwoynbk4mcdYizqKqnmg91Sd3at1tnI70Brcnnkfe21d0wAAAABJRU5ErkJggg=="/>
@@ -288,7 +376,7 @@
                 </div>
             </div>
             <div class="bloque bloque2">
-                <div class="buscar-span"><p>Buscar:</p> <input type="text"></div>
+                
                 <div class="contenedor-tabla">
                     <table>
                         <thead>
@@ -348,7 +436,7 @@
                     </table>
                 </div>
             </div>
-            <div class="bloque bloque3"><div class="buscar-span"><p>Buscar:</p> <input type="text"></div>
+            <div class="bloque bloque3">
             <div class="contenedor-tabla">
                 <table>
                     <thead>
@@ -385,7 +473,7 @@
                     </tbody>
                 </table>
             </div></div>
-            <div class="bloque bloque4"><div class="buscar-span"><p>Buscar:</p> <input type="text"></div>
+            <div class="bloque bloque4">
             <div class="contenedor-tabla">
                 <table>
                     <thead>
@@ -470,7 +558,7 @@
                     </tbody>
                 </table>
             </div></div>
-            <div class="bloque bloque5"><div class="buscar-span"><p>Buscar:</p> <input type="text"></div>
+            <div class="bloque bloque5">
             <div class="contenedor-tabla">
                 <table>
                     <thead>
@@ -574,7 +662,147 @@
                 </table>
             </div></div>
         </div>
+            </div>
+        
+      
+
+      <div class="contenedor-proveedores bloque-nav">
+<!-- ---------modal editar proveedor---------- -->
+        <div id="modal-editarProv" class="modal">
+            <div class="modal-contenido">
+              <span id="cerrar-modalEditProv" class="cerrar-modal">&times;</span>
+              <h2>Modificar Proveedor:</h2>
+              <div class="contenedor-modal-editProveedor">
+                <div class="cont-EP1">
+                    <div>
+                        
+                        <p>CUIT:</p>
+                        <p>R.Social:</p>
+                        <p>Direccion:</p>
+                        <p>Telefono:</p>
+                    </div>
+                    <div>
+                        
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                    </div>
+                </div>
+                    <div class="cont-EP2">
+                    <div>
+                        <p>Contacto:</p>
+                        <p>Email:</p>
+                        <p>Celular:</p>
+                        <p>Activo:</p> 
+                    </div>
+                    <div>
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <div>
+                            <input type="checkbox" name="" id="">
+                        </div>
+                    </div>
+                    </div>
+                    
+              </div>
+              <div class="cont-configuracionesEP">
+                    <h4>Configuraciones:</h4>
+                    <div class="configuracion-EP">
+                        <div class="conf-EP1">
+                            <p>Condicion de compra:</p>
+                            <p>Ingreso Online:</p>
+                            <p>Usuario:</p>
+                            <p>Contraseña:</p>
+                        </div>
+                        <div class="conf-EP2">
+                            <select name="" id=""></select>
+                            <div><input type="checkbox" name="" id=""></div>
+                            <span>Numero del servidor</span>
+                            <div><input type="text" name="" id=""></div>
+                        </div>
+                    </div>
+                    
+              </div>
+              <div class="cont-btngrd">
+                <button class="btn-grdEditCliente" id="btn-guardarEP">Guardar cambios</button>
+            </div>
+            </div>
+          </div>
+        <h1>Proveedores</h1>
+        <div class="cont-buscar-agregar">
+            <div class="buscar-span"><p>Buscar:</p> <input type="text"></div>
+            <button type="button" class="btn-agregarProv"> 
+                 <span class="button--text">Agregar Proveedor</span>
+                 <span class="button--icon">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                 </span>
+            </button>
+        </div>
+        <div class="cont-tablaProv">
+            <div class="contenedor-tabla">
+                <table>
+                    <thead>
+                        <th>Nombre</th>
+                        <th>CUIT</th>
+                        <th>Teléfono</th>
+                        <th>Celular</th>
+                        <th>E-mail</th>
+                        <th>Detalle</th>
+                        
+                    </thead>
+                    <tbody>
+                        <tr id="tr-modalEditProv">
+                            <td>
+                            Abdo Luis M.
+                            </td>
+                            <td>2342456457</td>
+                            <td>12312313</td>
+                            <td>15456373748</td>
+                            <td>
+                                holahola@hotmail.com
+                            <td>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            Abdo Luis M.
+                            </td>
+                            <td>2342456457</td>
+                            <td>12312313</td>
+                            <td>15456373748</td>
+                            <td>
+                                holahola@hotmail.com
+                            <td>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            Abdo Luis M.
+                            </td>
+                            <td>2342456457</td>
+                            <td>12312313</td>
+                            <td>15456373748</td>
+                            <td>
+                                holahola@hotmail.com
+                            <td>
+                                
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
       </div>
+    
+    </div>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
       <script src="app.js"></script>
 
 </body>

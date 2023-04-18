@@ -1,3 +1,4 @@
+
 const shrink_btn = document.querySelector(".shrink-btn");
 const search = document.querySelector(".search");
 const sidebar_links = document.querySelectorAll(".sidebar-links a");
@@ -84,7 +85,7 @@ li.forEach((cadaLi, i)=> {
     })
 })
 
-// funcion del modal
+// funcion del modal para editar cliente 
 
 const botonAbrirModal = document.getElementById("abrir-modal");
 const botonAbrirModal2 = document.getElementById("abrir-modal2");
@@ -112,5 +113,48 @@ function mostrarModal() {
   modal.style.display = 'block';
 }
 
-
 // fin de funcion del modal
+
+// funcion del modal para editar proveedor
+const AbrirModalEP = document.getElementById("tr-modalEditProv")
+const modalEditProv = document.getElementById("modal-editarProv");
+const botonCerrarModalEP = document.getElementById("cerrar-modalEditProv");
+
+
+
+AbrirModalEP.onclick = function() {
+  modalEditProv.style.display = "block";
+}
+
+botonCerrarModalEP.onclick = function() {
+  modalEditProv.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modalEditProv) {
+    modalEditProv.style.display = "none";
+  }
+}
+function mostrarModal() {
+  modalEditProv.style.display = 'block';
+}
+// fin de funcion del modal para editar proveedor --------------
+
+
+// js de nav bar
+
+
+const liNav = document.querySelectorAll('.li-nav');
+const bloqueNav = document.querySelectorAll('.bloque-nav');
+
+liNav.forEach((cadaLi, i)=> {
+    liNav[i].addEventListener('click', ()=>{
+
+        liNav.forEach ((cadaLi, i)=>{
+            liNav[i].classList.remove('activo')
+            bloqueNav[i].classList.remove('activo')
+        })
+        liNav[i].classList.add('activo')
+        bloqueNav[i].classList.add('activo')
+    })
+})
