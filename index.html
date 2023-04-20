@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/main.css">
     <link rel="stylesheet" href="/modal-Editar-proveedores.css">
+    <link rel="stylesheet" href="/modal-agregar-cliente.css">
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
     <title>TREELAN - Gestion</title>
 </head>
@@ -145,9 +146,72 @@
       <main>
         <!-- <button id="abrir-modal">Abrir Modal</button> -->
 
+<!-- --------------------------modal de agregar cliente ------------------------ -->
+<div id="modal-AgregCliente" class="modal">  
+    <div class="modal-contenido">
+      <span class="cerrar-modal" id="cerrar-ModalAG">&times;</span>
+      <h1 class="titulo-editarclient">Agregar nuevo cliente</h1>
+    <div class="modal-contenidoDos">
+        <div class="cont-datoscliente1">
+                <h2>Datos del cliente</h2>
+                
+                <div class="cont-datosmodal">
+                    <div class="cont-datosCliente">
+                        <p>EMPRESA:</p>
+                        <p>CUIT:</p>
+                        <p>DIRECCION:</p>
+                        <p>LOCALIDAD:</p>
+                        <p>PROVINCIA:</p>
+                        <p>PAIS:</p>
+                        <p>TELEFONO:</p>
+                        <p>CELULAR:</p>
+                        <p>CONTACTO:</p>
+                        <p>EMAIL:</p>
+                        <p>URL:</p>
+                        <p>Condicion IVA:</p> 
+                    </div>
+                
+                    <div class="cont-inputsCliente">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <select name="" id=""></select>
+                    </div>
+                </div>
+        </div>
+            <div class="cont-datoscliente2">
+                <h2>Servicios disponibles</h2>
+                <div class="cont-serviciosDisponibles">
+
+                </div>
+            </div>
+            <div class="cont-datoscliente3">
+                <h2>Servicios contratados</h2>
+                <div class="cont-serviciosContratados">
+
+                </div>
+            </div>
+    </div>
+    
+        
+        <div class="cont-btngrd">
+            <button class="btn-grdEditCliente">Agregar cliente</button>
+        </div>
+    </div>
+  </div>
+<!-- -------------------------- fin modal de agregar cliente ------------------------ -->
+
 <div id="mi-modal" class="modal">
   <div class="modal-contenido">
-    <span class="cerrar-modal">&times;</span>
+    <span class="cerrar-modal" id="cerrar-modal">&times;</span>
     <h1 class="titulo-editarclient">Editar cliente</h1>
     <div class="modal-contenidoDos">
         <div class="cont-datoscliente1">
@@ -322,7 +386,7 @@
                                     
                                 <td>
                                     
-                                    <button class="btn-editarClient" id="abrir-modal2">
+                                    <button class="btn-editarClient" id="abrir-modal3">
                                         
                                         <img height="20px" width="20px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZJJREFUSEvFllFRQzEQRW8VAA6QAAoAB6AAcAAKCgrAAaAAUABVADgABdRBO2cm6eyE5IUkO9P9aTt9ycm9u3m7M20pZlviqgbelXQk6aDxgJ+SFpKWpXUlMMA7SReNwPTxR0nXuQPkwKh7lrQ/CI3LvyWdScKFTaRglH4Y6Kuke0nvjYc4lnQT0sRS4IdWeQrGmvMAuZTE75EAPg8bPNnUWTBqf8NDKD0dIZq1uEWBEntRtQUDIrfESYe9HDxXxdj+FvYl1y98t2BrS+2apWZQkGxOBefSswoLbkPuXcAopXh2JmrDHRzt5b4/BPBX5oXjCk7tBX4liZymuXYDRyiKidrVcwGnUMA5e20BDoNL0Jy9buBeKAfoVjwC7QbTpWgcsZBiTmv2DlttX3k90G7FFkz1tiiNqrtyjMVx9KGZF8eZQjezzce9SUx10GpbHOlOJfC/BgFPMHXA5MEn8RPStUlTqR9PWdf6H1DyXBz26CyMtJ7BnMW+fwoynbk4mcdYizqKqnmg91Sd3at1tnI70Brcnnkfe21d0wAAAABJRU5ErkJggg=="/>
                                     </button>
@@ -355,7 +419,7 @@
                                     
                                 </td>
                                 <td>
-                                    <button class="btn-editarClient" id="abrir-modal3">
+                                    <button class="btn-editarClient" id="abrir-modal4">
                                         <img height="20px" width="20px" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAZJJREFUSEvFllFRQzEQRW8VAA6QAAoAB6AAcAAKCgrAAaAAUABVADgABdRBO2cm6eyE5IUkO9P9aTt9ycm9u3m7M20pZlviqgbelXQk6aDxgJ+SFpKWpXUlMMA7SReNwPTxR0nXuQPkwKh7lrQ/CI3LvyWdScKFTaRglH4Y6Kuke0nvjYc4lnQT0sRS4IdWeQrGmvMAuZTE75EAPg8bPNnUWTBqf8NDKD0dIZq1uEWBEntRtQUDIrfESYe9HDxXxdj+FvYl1y98t2BrS+2apWZQkGxOBefSswoLbkPuXcAopXh2JmrDHRzt5b4/BPBX5oXjCk7tBX4liZymuXYDRyiKidrVcwGnUMA5e20BDoNL0Jy9buBeKAfoVjwC7QbTpWgcsZBiTmv2DlttX3k90G7FFkz1tiiNqrtyjMVx9KGZF8eZQjezzce9SUx10GpbHOlOJfC/BgFPMHXA5MEn8RPStUlTqR9PWdf6H1DyXBz26CyMtJ7BnMW+fwoynbk4mcdYizqKqnmg91Sd3at1tnI70Brcnnkfe21d0wAAAABJRU5ErkJggg=="/>
                                     </button>
                                     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAAXNSR0IArs4c6QAAAYFJREFUSEvdlu0xBEEQhp/LgAyEQARHBkSADFwEiAARIAJEwEWADIiADKi3qmera8zY2Z1ZW6X/3F3d9DzT371gJlnMxKUPvAEsge2BD3wB1sBnTi8HFvACOBoIjI/fAKvUA1JgWXcHbFVCg/obcADIC53EYFn67KAPwCXwNPARu8CZhUmqgu94y2OwXHNokGNAv2tE8FO74NaHzoNl7YcdkqX7NUSnK28pQSWbwWoPFkixleyNcG/unXL7o/2pWN/ruwd7t/SV2VBnfJnCucX+f4CVI3LpVSIpJ7M4QEOH62JpLp4EHENfASWUb5dVYNW0SsPXdglURo8GpxpLKbQKrGFx7WpIjV8dLsQ05V5fcqMt1iUxPFzcB62yOEBieAm0CdhbXgptBtZF6uvK8OyGEfXUqhgP7c/hvB8+fzokesfiFNOpaBFoCVbL1OahT8m71XyXE7l5PDaeKT1BFefssndiK21LqPYs3fsj++OdSy9rsdbKul/LrfWKU+yt2cDfcRJ1H22zbD8AAAAASUVORK5CYII="/>
@@ -722,10 +786,73 @@
             </div>
             </div>
           </div>
+          <!-- contenido modal agregar proveedor -->
+          <div id="modal-AgregProveedor" class="modal">  
+            <div class="modal-contenido">
+              <span class="cerrar-modal" id="cerrar-ModalAP">&times;</span>
+              <h2>Agregar nuevo proveedor:</h2>
+              <div class="contenedor-modal-editProveedor">
+                <div class="cont-EP1">
+                    <div>
+                        
+                        <p>CUIT:</p>
+                        <p>R.Social:</p>
+                        <p>Direccion:</p>
+                        <p>Telefono:</p>
+                    </div>
+                    <div>
+                        
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                    </div>
+                </div>
+                    <div class="cont-EP2">
+                    <div>
+                        <p>Contacto:</p>
+                        <p>Email:</p>
+                        <p>Celular:</p>
+                        <p>Activo:</p> 
+                    </div>
+                    <div>
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <input type="text" name="" id="">
+                        <div>
+                            <input type="checkbox" name="" id="">
+                        </div>
+                    </div>
+                    </div>
+                    
+              </div>
+              <div class="cont-configuracionesEP">
+                    <h4>Configuraciones:</h4>
+                    <div class="configuracion-EP">
+                        <div class="conf-EP1">
+                            <p>Condicion de compra:</p>
+                            <p>Ingreso Online:</p>
+                            <p>Usuario:</p>
+                            <p>Contraseña:</p>
+                        </div>
+                        <div class="conf-EP2">
+                            <select name="" id=""></select>
+                            <div><input type="checkbox" name="" id=""></div>
+                            <span>Numero del servidor</span>
+                            <div><input type="text" name="" id=""></div>
+                        </div>
+                    </div>
+                    
+              </div>
+              <div class="cont-btngrd">
+                <button class="btn-grdEditCliente" id="btn-guardarEP">Guardar cambios</button>
+            </div>
+            </div>
+          </div>
         <h1>Proveedores</h1>
         <div class="cont-buscar-agregar">
             <div class="buscar-span"><p>Buscar:</p> <input type="text"></div>
-            <button type="button" class="btn-agregarProv"> 
+            <button type="button" class="btn-agregarProv" id="btn-agregarProveedor"> 
                  <span class="button--text">Agregar Proveedor</span>
                  <span class="button--icon">
                     <ion-icon name="add-circle-outline"></ion-icon>
