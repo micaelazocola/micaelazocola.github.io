@@ -90,12 +90,15 @@ li.forEach((cadaLi, i)=> {
 const botonAbrirModal = document.getElementById("abrir-modal");
 const botonAbrirModal2 = document.getElementById("abrir-modal2");
 const botonAbrirModal3 = document.getElementById("abrir-modal3");
+const botonAbrirModal4 = document.getElementById("abrir-modal4");
 const modal = document.getElementById("mi-modal");
-const botonCerrarModal = document.getElementsByClassName("cerrar-modal")[0];
+const botonCerrarModal = document.getElementById("cerrar-modal");
 
 
 botonAbrirModal2.addEventListener('click', mostrarModal);
 botonAbrirModal3.addEventListener('click', mostrarModal);
+botonAbrirModal4.addEventListener('click', mostrarModal);
+
 botonAbrirModal.onclick = function() {
   modal.style.display = "block";
 }
@@ -158,3 +161,53 @@ liNav.forEach((cadaLi, i)=> {
         bloqueNav[i].classList.add('activo')
     })
 })
+
+
+//modal para agregar cliente nuevo//
+
+const AbrirModalAC = document.getElementById("btn-agregarCliente")
+const modalAgregarClient = document.getElementById("modal-AgregCliente");
+const botonCrrModAgregarClient = document.getElementById("cerrar-ModalAG");
+
+
+
+AbrirModalAC.onclick = function() {
+  modalAgregarClient.style.display = "block";
+}
+
+botonCrrModAgregarClient.onclick = function() {
+  modalAgregarClient.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modalAgregarClient) {
+    modalAgregarClient.style.display = "none";
+  }
+}
+function mostrarModal() {
+  modalAgregarClient.style.display = 'block';
+}
+// funcion abrir modal agregar proveedor nuevo
+
+const AbrirModalAP = document.getElementById("btn-agregarProveedor")
+const modalAgregarProv = document.getElementById("modal-AgregProveedor");
+const botonCrrModAgregarProv = document.getElementById("cerrar-ModalAP");
+
+
+
+AbrirModalAP.onclick = function() {
+  modalAgregarProv.style.display = "block";
+}
+
+botonCrrModAgregarProv.onclick = function() {
+  modalAgregarProv.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modalAgregarProv) {
+    modalAgregarProv.style.display = "none";
+  }
+}
+function mostrarModal() {
+  modalAgregarProv.style.display = 'block';
+}
